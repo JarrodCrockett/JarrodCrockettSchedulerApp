@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.AddCourse">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addCourseSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/courseTitleLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Title"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/addCourseTitleTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="20"
+                android:hint="Name of Course"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Date"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/addCourseStartDateTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="20"
+                android:hint="MM/dd/yyyy"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="End Date"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/addCourseEndDateTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:ems="20"
+                android:hint="MM/dd/yyyy"
+                android:inputType="" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructor Information"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/addCourseInstructorNameTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="20"
+                android:hint="Instructor Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/addCourseInstructorPhoneTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Instructor Phone Number"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/addCourseInstructorEmailTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="20"
+                android:hint="Instructor Email"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:text="Course Status"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/courseStatusRGoup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/addCourseInProgressRBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="In progress" />
+
+                    <RadioButton
+                        android:id="@+id/addCourseCompletedRBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Completed" />
+
+                    <RadioButton
+                        android:id="@+id/addCourseDroppedRBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dropped" />
+
+                    <RadioButton
+                        android:id="@+id/addCoursePlanTTRBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Planned to take" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes:" />
+
+            <EditText
+                android:id="@+id/addCourseNote"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/addCourseCancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="cancelAddCourse"
+                android:text="Cancel" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

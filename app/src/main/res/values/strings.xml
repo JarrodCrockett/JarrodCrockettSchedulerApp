@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JarrodCrockettSchedulerApp</string>
+    <string name="current_term">Current Term</string>
+    <string name="all_terms">All Terms</string>
+</resources>

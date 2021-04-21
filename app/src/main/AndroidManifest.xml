@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jarrodcrockettschedulerapp">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JarrodCrockettSchedulerApp">
+        <receiver
+            android:name=".UI.MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".UI.AddAssessment"
+            android:label="Add Assessment" />
+        <activity
+            android:name=".UI.CurrentAssessment"
+            android:label="Assessment Details" />
+        <activity
+            android:name=".UI.AddCourse"
+            android:label="Add Course" />
+        <activity
+            android:name=".UI.CurrentCourse"
+            android:label="Course Details" />
+        <activity
+            android:name=".UI.AddTerm"
+            android:label="Add Term" />
+        <activity
+            android:name=".UI.CurrentTerm"
+            android:parentActivityName=".UI.AllTerms" />
+        <activity
+            android:name=".UI.AllTerms"
+            android:label="All Terms"
+            android:parentActivityName=".UI.MainActivity" />
+        <activity android:name=".UI.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
